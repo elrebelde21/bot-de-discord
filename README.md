@@ -1,4 +1,4 @@
-### BASE PARA TU BOT DESDE DISCORD DESDE 0
+### `BASE PARA TU BOT DESDE DISCORD DESDE 0`
 
 <p align="center">
 <a href="#"><img title="The-LoliBot-MD" src="https://img.shields.io/badge/ME PUEDEN DAR UNA 🌟 SI TE AGRADA Y TE GUSTO :v ¡GRACIAS! -red?colorA=%255ff0000&colorB=%23017e40&style=for-the-badge"></a> 
