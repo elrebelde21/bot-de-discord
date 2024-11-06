@@ -93,12 +93,17 @@ Este documento te guiará en la obtención del token necesario para tu bot de Di
    node index.js
    ```
 
-## Instalación del Bot en SkyUltraPlus Hosting
+## Instalación via host en SkyUltraPlus Hosting 24/7 online
 
-1. Ve a [SkyUltraPlus Hosting](https://dash.skyultraplus.com) y crea una cuenta o inicia sesión.
-2. Crea un nuevo proyecto e importa el repositorio de tu bot.
-3. Configura las variables de entorno para tu bot, incluyendo el token.
-4. Despliega el proyecto y asegúrate de que esté configurado para ejecutarse automáticamente.
-5. Tu bot estará ahora activo 24/7.
+[![YouTube](https://img.shields.io/badge/SkyUltraPlus-Host-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/fZbcCLpSH6Y?si=1sDen7Bzmb7jVpAI)
 
-¡Y eso es todo! Tu bot de Discord debería estar ahora en funcionamiento y listo para responder a eventos en tu servidor.
+<a href="https://dash.corinplus.com"><img src="https://qu.ax/zFzXF.png" height="125px"></a>
+
+### Información del Host
+- **Dashboard:** [`Aquí`](https://dash.skyultraplus.com)
+- **Panel:** [`Aquí`](https://panel.skyultraplus.com)
+- **Estado de servicios:** [`Aquí`](https://estado.skyultraplus.com)
+- **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029VakUvreFHWpyWUr4Jr0g)
+- **Comunidad:** [`Aquí`](https://chat.whatsapp.com/JPwcXvPEUwlEOyjI3BpYys)
+- **Contacto(s):** [`Gata Dios`](https://wa.me/message/B3KTM5XN2JMRD1) / [`Russell`](https://api.whatsapp.com/send/?phone=15167096032&text&type=phone_number&app_absent=0) / [`elrebelde21`](https://facebook.com/elrebelde21)
+- **Discord:** [`SkyUltraPlus`](https://discord.gg/Ph4eWsZ8)
