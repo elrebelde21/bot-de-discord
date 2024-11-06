@@ -6,8 +6,7 @@ const chalk = require('chalk');
 global.owner = [
 ["1008834879858946170"],
 ["750524319876120657"],
-["1132831529190559744"],
-[""],
+["1132831529190559744"], //Aca pueden poner tu ID para que sea owner del bot
 ]
 
 //---------[ Token ]---------
@@ -15,7 +14,7 @@ global.botToken = "TU_TOKEN_AQUI"; // Reemplaza 'TU_TOKEN_AQUI' con el token de 
 //Sacar tu token aqui: https://discord.com/developers/applications
 
 //---------[ NOMBRE/INFO ]---------
-global.wm = "SkyBot"
+global.wm = "SkyBot" //Cambiar el nombre por el nombre que desee para tu bot :)
 
 //---------[ FECHA/IDIOMAS ]---------
 global.place = 'America/Bogota' // Aquí puedes encontrar tu ubicación https://momentjs.com/timezone/
@@ -71,30 +70,21 @@ global.APIKeys = {
 //---------[ IMAGEN ]---------
 global.img = "https://qu.ax/Zgqq.jpg"
 global.img1 = 'https://qu.ax/hNJk.jpg'
-global.img2 = 'https://qu.ax/jzhN.jpg'
+global.img2 = 'https://qu.ax/jzhN.jpg' //Cambiar la url por tu imagen o guarda la imagen locales  aqui 👇 
 
 global.imagen1 = fs.readFileSync('./media/menu.jpg')
-
+ 
 //---------[ ENLACES ]---------
-global.md = 'https://github.com/elrebelde21/NovaBot_MD'
+global.md = 'https://github.com/elrebelde21'
 global.yt = 'https://www.youtube.com/@elrebelde.21'
 global.tiktok = 'tiktok.com/@elrebelde21'
 global.fb = 'https://www.facebook.com/elrebelde21'
 global.faceb = 'https://facebook.com/groups/872989990425789/'
 global.paypal = 'https://paypal.me/OficialGD' 
+//pueden cambiar los links por los tuyo como gusten :v
 
-global.host = 'https://chat.whatsapp.com/KGPhTIfgOzZCMNqoc3R7OW' //Infinity-host
-global.nna = 'https://whatsapp.com/channel/0029Va4QjH7DeON0ePwzjS1A' //Update 
-global.nn = 'https://chat.whatsapp.com/HNDVUxHphPzG3cJHIwCaX5' //LoliBot
-global.nn2 = 'https://chat.whatsapp.com/H4hxytyGvucIF1k0UAR7es' //Loli & Nova
-global.nn3 = 'https://chat.whatsapp.com/Ej5AUrpmYnJKYtEa6YMwK6' //Grupo de Colaboracion
-global.nn4 = 'https://chat.whatsapp.com/E9qJfvlLjENKAxnhII9rao' // Grupo COL 2
-global.nn5 = 'https://chat.whatsapp.com/B6vVEmV3zffHNyabOMtzSb' //Grupo COL 3
-global.nn6 = 'https://chat.whatsapp.com/Em4Byf4w5VgHObPvZQlfnM' //test
-global.nn7 = 'https://chat.whatsapp.com/FDRfhecUGrCEQswkg8FUYz' //Grupo ayuda sobre el bot
-global.nn8 = 'https://chat.whatsapp.com/IstOAq2RnBx687WhQpOYK8' //enlace lolibot
-global.multi = 'https://chat.whatsapp.com/IB9Vs7mZ03BBkH3reCU8Dw' //Grupo COL 4
-global.nna2 = 'Em4Byf4w5VgHObPvZQlfnM'
+global.nna = "https://whatsapp.com/channel/0029Va4QjH7DeON0ePwzjS1A" //Canal de WhatsApp "Infinity-wa"
+global.nn = "https://discord.gg/zvKgtc2RBc" //Servidor de discord "SkyUltraPlus" 
 
 //---------[ INFO ]--------- 
 global.info = {
