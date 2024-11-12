@@ -36,8 +36,8 @@ Este documento te guiará en la obtención del token necesario para tu bot de Di
 ## Requisitos
 
 - Una cuenta de Discord
-- Termux instalado si decides usar Termux:
-- Node.js instalado en Termux
+- instalar en PC o Termux
+- Instalar la librerias de Node.js
 - Una cuenta en el [Portal de Desarrolladores de Discord](https://discord.com/developers/applications)
 
 ## Paso 1: Crear una Aplicación en Discord
@@ -68,16 +68,15 @@ Este documento te guiará en la obtención del token necesario para tu bot de Di
 3. En **"BOT PERMISSIONS"**, selecciona los permisos que desees otorgarle a tu bot.
 4. Copia la URL generada y ábrela en tu navegador. Selecciona el servidor al que deseas invitar el bot y haz clic en **"Authorize"**.
 
-## Instalación del Bot en Termux
+## Instalación por pc o en Termux (nose si funkas) 
 
-1. Abre Termux en tu dispositivo móvil.
-2. Actualiza los paquetes de Termux:
+1. Instalar los paquetes:
    ```sh
-   pkg update
+   pkg update && pkg upgrade
    ```
-3. Instala Node.js en Termux:
+3. Instala Node.js:
    ```sh
-   pkg install nodejs
+   pkg install nodejs 
    ```
 4. Clona el repositorio de tu bot en Termux:
    ```sh
@@ -92,8 +91,9 @@ Este documento te guiará en la obtención del token necesario para tu bot de Di
    ```sh
    node index.js
    ```
+----
 
-## Instalación via host en SkyUltraPlus Hosting 24/7 online
+## Instalación via host en SkyUltraPlus Hosting 24/7 online (RECOMENDADO) 
 
 [![YouTube](https://img.shields.io/badge/SkyUltraPlus-Host-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/fZbcCLpSH6Y?si=1sDen7Bzmb7jVpAI)
 
@@ -107,3 +107,9 @@ Este documento te guiará en la obtención del token necesario para tu bot de Di
 - **Comunidad:** [`Aquí`](https://chat.whatsapp.com/JPwcXvPEUwlEOyjI3BpYys)
 - **Contacto(s):** [`Gata Dios`](https://wa.me/message/B3KTM5XN2JMRD1) / [`Russell`](https://api.whatsapp.com/send/?phone=15167096032&text&type=phone_number&app_absent=0) / [`elrebelde21`](https://facebook.com/elrebelde21)
 - **Discord:** [`SkyUltraPlus`](https://discord.gg/Ph4eWsZ8)
+
+-----
+
+## `By: elrebelde21`
+
+<a href="https://github.com/elrebelde21"><img src="https://github.com/elrebelde21.png" width="250" height="250" alt="elrebelde21"/></a>

@@ -7,7 +7,7 @@ require('./settings.js');
 const { Client, GatewayIntentBits, ActionRowBuilder, ButtonBuilder, ButtonStyle, Partials, EmbedBuilder } = require('discord.js'); // Importa las clases necesarias de discord.js para manejar el bot de Discord
 const {isUrl, runtime, sendButton} = require('./libs/fuctions'); // Importa funciones personalizadas para validar URLs, medir tiempo de ejecución y enviar botones
 const fs = require('fs'); // Permite trabajar con el sistema de archivos
-const yargs = require('yargs/yargs'); // Facilita la creación y gestión de comandos en la línea de comandos
+const yargs = require('yargs/yargs') // Facilita la creación y gestión de comandos en la línea de comandos
 const chalk = require('chalk'); // Permite estilizar el texto en la consola con colores
 const { promisify } = require('util'); // Convierte funciones basadas en callback a promesas
 const cp = require('child_process'); // Permite ejecutar comandos del sistema y crear procesos secundarios
@@ -21,40 +21,31 @@ const moment = require('moment-timezone'); // Maneja fechas y zonas horarias
 const hispamemes = require('hispamemes'); 
 
 //----------------[ BASE DE DATOS ]--------------------
-const low = require('lowdb'); 
-const { Low, JSONFile } = low;
-const mongoDB = require('./libs/database/mongoDB'); //Conexión a MongoDB
-const yargs = require('yargs/yargs'); //Parsing de argumentos
+var low
+try {
+low = require('lowdb')
+} catch (e) {
+low = require('./libs/database/lowdb')
+}
 
-global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse()); 
+const { Low, JSONFile } = low
+const mongoDB = require('./libs/database/mongoDB')
 
+global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
 global.db = new Low(
-  /https?:\/\//.test(opts['db'] || '') ? 
-    new cloudDBAdapter(opts['db']) : 
-  /mongodb/.test(opts['db']) ? 
-    new mongoDB(opts['db']) : 
-  new JSONFile(`./database.json`)
-);
-
-global.DATABASE = global.db;
-
-//Función para cargar la base de datos
+/https?:\/\//.test(opts['db'] || '') ?
+new cloudDBAdapter(opts['db']) : /mongodb/.test(opts['db']) ?
+new mongoDB(opts['db']) :
+new JSONFile(`./database.json`)
+)
+global.DATABASE = global.db // Backwards Compatibility
 global.loadDatabase = async function loadDatabase() {
-  if (global.db.READ) return new Promise((resolve) => 
-    setInterval(function () {
-      (!global.db.READ ? 
-        (clearInterval(this), resolve(global.db.data == null ? global.loadDatabase() : global.db.data)) : 
-        null)
-    }, 1 * 1000)
-  );
-  
-  //Leer la base de datos
-  if (global.db.data !== null) return global.db.READ = true;
-  await global.db.read();
-  global.db.READ = false;
-  
-  //Inicializar la estructura de la base de datos
-  global.db.data = { 
+if (global.db.READ) return new Promise((resolve) => setInterval(function () { (!global.db.READ ? (clearInterval(this), resolve(global.db.data == null ? global.loadDatabase() : global.db.data)) : null) }, 1 * 1000))
+if (global.db.data !== null) return
+global.db.READ = true
+await global.db.read()
+global.db.READ = false
+global.db.data = { 
     users: {}, 
     chats: {}, 
     game: {}, 
@@ -65,16 +56,12 @@ global.loadDatabase = async function loadDatabase() {
     sticker: {}, 
     ...(global.db.data || {})
   };
-  
-  global.db.chain = _.chain(global.db.data);
-}; //Crear una cadena de métodos para la base de datos
+ global.db.chain = _.chain(global.db.data)}
+loadDatabase() //@aidenlogin
 
-loadDatabase(); //Cargar la base de datos
-
-//Guardar la base de datos cada 30 segundos
 if (global.db) setInterval(async () => {
-  if (global.db.data) await global.db.write();
-}, 30000);
+if (global.db.data) await global.db.write()
+}, 5 * 1000)
 
 //-----------------------------------------------------------------------------
 //Crear un nuevo cliente de Discord
@@ -115,7 +102,6 @@ console.log('❌ No se ha configurado un canal de memes para el servidor:', guil
 } catch (error) {
 console.error('Error al obtener el meme:', error);
 }}, 60 * 60 * 1000); // 1 hora
-});
 //----------------------------------------------------------------------------- 
 
 //---------------------[ WELCOME ]-------------------------
@@ -179,6 +165,7 @@ const newPermissions = newMember.permissions;
 if (!oldPermissions.has('ADMINISTRATOR') && newPermissions.has('ADMINISTRATOR')) {
 message.reply(`[ PROMOTE ]\n${newMember.user.tag} ha sido asignado como nuevo administrador.`);
 }
+});
 
 //Evento para detectar cuando alguien deja de ser administrador
 client.on('guildMemberUpdate', (oldMember, newMember) => {
