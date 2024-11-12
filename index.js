@@ -394,7 +394,7 @@ case 'ytmp3':
 if (!registrarte(message)) return;
 const searchText = args.join(' ');
 if (!searchText) {
-return message.reply('🚩 Ejemplo de uso: #play maluma');
+return message.reply('🚩 Ejemplo de uso: #ytmp3 maluma');
 }
 
 const videoSearch = await yts(searchText);
