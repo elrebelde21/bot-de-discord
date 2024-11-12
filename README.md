@@ -36,7 +36,6 @@ Este documento te guiará en la obtención del token necesario para tu bot de Di
 ## Requisitos
 
 - Una cuenta de Discord
-- instalar en PC o Termux
 - Instalar la librerias de Node.js
 - Una cuenta en el [Portal de Desarrolladores de Discord](https://discord.com/developers/applications)
 
